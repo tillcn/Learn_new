@@ -2,8 +2,8 @@
 # --*-- coding:utf-8 --*--
 class Home:
     '''此为操作类、调用类的实例
-    重点是 Furniture 类的get方法
-    跟 Home 类中的调用 Furniture类中属性的方法'''
+重点是 Furniture 类的get方法
+跟 Home 类中的调用 Furniture类中属性的方法'''
     def __init__(self,area):
         self.area = area
         self.rongNaList = []
@@ -64,4 +64,3 @@ print(home,"\n")
 #想一想这里的内容是怎么产生的。
 for i in home.rongNaList:
     print(i)
-
