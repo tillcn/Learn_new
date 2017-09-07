@@ -29,8 +29,16 @@ fun1()
 class class1:
     def fun2(self):
         pass
-    def __init__(self):    #设置默认属性
+
+    def __init__(self,name):    #设置默认属性
+        self.__name = name
+
+    def __str__(self):         #设置默认输出
+        print(self.__name)
+
+    def __del__(self):
         pass
+
 
 #创建对象 (方法/属性调用)
 l = class1()
