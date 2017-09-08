@@ -34,12 +34,12 @@ class class1:
         self.__name = name
 
     def __str__(self):         #设置默认输出
-        print(self.__name)
+        return  self.__name
 
     def __del__(self):
         pass
 
 
 #创建对象 (方法/属性调用)
-l = class1()
-l.fun2()
+l = class1("小王")
+print(l)
