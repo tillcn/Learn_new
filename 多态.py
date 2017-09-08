@@ -40,4 +40,4 @@ shout(g)
 
 print("\n")
 print("这就是多态，还有python崇尚的鸭子类型：声音像鸭子，走路像鸭子，就看做鸭子，"
-      "比如Goat不属于Animal类型，但里边有bark方法，那shout就能调用")
+      "\n比如Goat不属于Animal类型，但里边有bark方法，那shout就能调用")
