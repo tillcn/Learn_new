@@ -6,6 +6,7 @@ class Animal(object):
 
 class Dog(Animal):
     def bark(self):
+        Animal.bark(self)                   #重写父类后，继续使用父类部分方法
         print("汪汪汪汪汪汪汪汪汪汪汪汪汪汪汪汪汪汪汪")
 
 class Cat(Animal):
