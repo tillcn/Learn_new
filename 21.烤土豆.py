@@ -25,6 +25,7 @@ class Potato:
             self.cookstring = "刚开始烤的"
     def addcondments(self,tmp):
         self.condiments.append(tmp)
+#ptin(,,,,)
 
 sweetPotato = Potato()
 print("------开始烤红薯------")

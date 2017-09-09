@@ -21,7 +21,6 @@ class result:
 #放在外面叫函数
 def fun1():
     pass
-
 #函数调用
 fun1()
 
@@ -38,7 +37,6 @@ class class1:
 
     def __del__(self):
         pass
-
 
 #创建对象 (方法/属性调用)
 l = class1("小王")

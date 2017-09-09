@@ -8,6 +8,7 @@ class Animal(object):
     def __str__(self):
         msg=" 名字：%s\n 颜色：%s\n 吃什么：%s\n 叫声：%s\n 跑速：%s\n" % (self.name,self.color,self.eat(),self.bark(),self.run())
         return msg
+        
 
     def eat(self):
         return "吃草。。。。"
