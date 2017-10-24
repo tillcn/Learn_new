@@ -51,3 +51,5 @@ for n in scores:
     result += line
 with open('Score.txt','w') as f:
     f.write(result)
+
+
