@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import random
 name = input('请输入你的名字:')
-with open('Score.txt','r') as f:
+with open('Score.txt','r',encoding='utf-8') as f:
     lines = f.readlines()
 scores = {}                                         #初始化一个空字典
 for l in lines:
@@ -21,31 +21,28 @@ else:
 print('%s,你已经玩了%d次,最少%d轮猜出答案,平均%.2f猜出答案' % (name,game_times,min_times,avg_times))
 com = random.randint(1, 100)
 times = 0
-guess=True
-while guess:
-    people = input('请输入你的选择(1-100),查询成绩请输入c：')
+while True:
+    people = input('请输入你的选择(1-100):')
     times += 1
     if people.isdigit() and 0 < int(people) < 101:
         peo = int(people)
         if peo == com:
             print('恭喜你，猜对了。')
-            guess = False
+            break
         elif peo > com:
             print('你输入的数字太大。')
         elif peo < com:
             print('你输入数字太小')
-    elif people == 'c' or people == 'C':
-        print('%s,你已经玩了%d次,最少%d轮猜出答案,平均%.2f猜出答案' % (name,game_times,min_times,avg_times))
     else:
         print('你的输入有误，请重新输入')
 if game_times == 0 or times < min_times:
     min_times = times
-total_times += times                                                            #猜的部次数
+total_times += times                                                            #猜的总次数
 game_times += 1                                                                 #玩了多少回
 scores[name] = [str(game_times),str(min_times),str(total_times)]                #把上面的数值以name为key名存为value
 result = ''                                                                     #定义一个空字段
 for n in scores:                                                                #for循环字典n得到的是每一项的key, scores[n]就是对应的value
     line = n+' ' + ' '.join(scores[n]) + '\n'                                   #n就key，scores是值     .join 列表转字符串                              
     result += line
-with open('Score.txt','w') as f:
+with open('Score.txt','w',encoding='utf-8') as f:
     f.write(result)
